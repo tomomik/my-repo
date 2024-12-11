@@ -1,14 +1,16 @@
 name: Dump
 description: |
+  '環境変数とgithubコンテキストをログへ出力します。'
+  'ワークフローのデバッグに便利です。'
 inputs:
   enable-context:
-  default: 'true'
-  required: false
-  description:コンテキストをログ出力するか
+    default: 'true'
+    required: false
+    description: 'コンテキストをログ出力するか'
 outputs:
   dumped-date:
     value: ${{ steps.current.outputs.date }}
-    description: ダンプ日時
+    description: 'ダンプ日時'
 runs:
   using: composite
   steps:
